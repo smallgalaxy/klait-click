@@ -1,0 +1,14 @@
+[Unit]
+Description=Keksbot - Telegram bot 'bot_push'
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3.8 /usr/local/bin/bot/main.py
+WorkingDirectory=/usr/local/bin/bot
+Type=simple
+User=root
+RestartSec=1
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
